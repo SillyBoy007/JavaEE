@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>使用a标签直接指向服务器上的资源</h3>
+    <div><a href="/download/a.flv">a.flv</a></div>
+    <div><a href="/download/a.jpg">a.jpg</a></div>
+    <div><a href="/download/a.txt">a.txt</a></div>
+    <div><a href="/download/a.mp3">a.mp3</a></div>
+    <h3>使用服务器编码的方式实现文件下载</h3>
+    <div><a href="/downloadServlet?filename=a.jpg">a.jpg</a></div>
+    <div><a href="/downloadServlet?filename=a.txt">a.txt</a></div>
+    <div><a href="/downloadServlet?filename=a.mp3">a.mp3</a></div>
+    <h3>中文名下载</h3>
+    <div><a href="/downloadServlet?filename=人类.jpg">人类.jpg</a></div>
+</body>
+<script>
+
+</script>
+</html>

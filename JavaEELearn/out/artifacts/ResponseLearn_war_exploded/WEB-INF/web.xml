@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>JavaEELearn</display-name>
+
+    <!-- 注册ServletContext创建销毁监听器-->
+   <!-- <listener>
+        <listener-class>com.wang.listener.ServletContextListenerImpl</listener-class>
+    </listener>-->
+    <!-- 注册生日邮件提醒监听器-->
+<!--    <listener>
+        <listener-class>com.wang.listener.birthday.BirthdayListener</listener-class>
+    </listener>-->
+
+    <!-- 注册HttpSession创建销毁监听器-->
+   <!-- <listener>
+        <listener-class>com.wang.listener.HttpSessionListenerImpl</listener-class>
+    </listener>-->
+
+    <!-- ServletContextAttribute属性监听器-->
+<!--    <listener>
+        <listener-class>com.wang.listener.ServletContextAttributeImpl</listener-class>
+    </listener>-->
+
+    <!-- 过滤器配置 -->
+   <!-- <filter>
+        <filter-name>QuickFilter</filter-name>
+        <filter-class>com.wang.filter.QuickFilter</filter-class>
+        &lt;!&ndash; 过滤器初始化参数 &ndash;&gt;
+        <init-param>
+            <param-name>aaa</param-name>
+            <param-value>Aaa</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>QuickFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+       &lt;!&ndash; <dispatcher>REQUEST</dispatcher>&ndash;&gt;
+       &lt;!&ndash; <dispatcher>FORWARD</dispatcher>&ndash;&gt;
+    </filter-mapping>
+
+    <filter>
+        <filter-name>SecondFilter</filter-name>
+        <filter-class>com.wang.filter.SecondFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecondFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+
+    <!--过滤中文乱码-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.wang.enhance.proxy.Encoding</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--默认访问页面 ,按顺序访问 -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
